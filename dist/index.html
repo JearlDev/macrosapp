@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Macro-nutrient Calculator</title>
+		<!-- meta data -->
+		<meta name="title" content="">
+  		<meta name="description" content="">
+ 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Russo+One&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="Assets/CSS/macros.css">
+		<!-- link to fontawesome icon library -->
+		<link href="./Assets/Libraries/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet">
+	</head>
+	<body>
+
+		<header>
+				<nav>
+				<div class="left-nav">
+						<a class="navLink" href="#"><i class="fas fa-home"></i>Home</a>
+						<div class="dropdown">
+							<a href="#" class="dropBtn">Calculate <i class="fas fa-chevron-down"></i></a>
+  							<div class="dropdown-content">
+    							<a class="dropOpt" href="#">Macros</a>
+    							<a class="dropOpt" href="#">Fat %</a>
+    							<a class="dropOpt" href="#">1 Rep Max</a>
+  							</div>
+						</div>
+				</div>
+				<div id="mid-nav">
+					<a class="headLink" id="navLogo" href="macros.html"><h1 class="macrosHeader">macr<i class="fas fa-hamburger"></i>s</h1></a>
+				</div>
+				<div class="right-nav">
+					<a class="rightLink navLink" href="#">contact<i class="fas fa-phone"></i></a>
+					<a class="rightLink navLink" href="#">guide</a>
+				</div>
+				<div id=dropdownBars></div>
+			</nav>
+			<div id="dropNav"></div>
+		</header>
+
+		<div id="pageContainer">
+			<div id="contentContainer">	
+
+			<div id="containerCalc">
+				<a class="headLink" href="#"><h1 id="calcHead">macr<i class="fas fa-hamburger"></i>s calculator</h1></a>
+				<hr>
+
+				<div id="formContainer">
+				<form>
+
+					<div class="inptDiv">
+						<label for="ageInput" class="inpLabel">Age</label>
+						<input id="ageInput" class="normInput" type="number" placeholder="Age in years" required pattern=".{1,}">
+					</div>
+
+					<div id="sexInput" class="inptDiv">
+						<label for="gender" class="inpLabel">Sex</label>
+					<span class="radioOptions">
+							<input type="radio" class="gender" id="male" name="gender" value="m">
+  							<label for="m">Male</label>
+  					</span>
+  					<span class="radioOptions">
+  							<input type="radio" class="gender" id="female" name="gender" value="f">
+  							<label for="f">Female</label>
+  					</span>
+  					</div>	
+
+					<div id="hWDiv">
+						<span id="hSpan">
+							<label for="heightInput" class="inpLabel">Height</label>
+							<input id="heightInput" class="hWInput" type="number" placeholder="Height in cm" required pattern=".{1,}">
+						</span>
+					
+						<span id="wSpan">
+							<label for="weightInput" class="inpLabel">Weight</label>
+							<input id="weightInput" class="hWInput" type="number" placeholder="Weight in kg" required pattern=".{1,}">
+						</span>
+					</div>
+
+					<div class="inptDiv">
+						<label for="fitGoal" class="inpLabel">Fitness Goal</label>
+						<select id="fitGoal" required>
+            				<option disabled selected value="0">Choose Fitness Goal</option>
+							<option value="mg">muscle gain</option>
+							<option value="mm">muscle maintenance</option>
+							<option value="fl">fat loss</option>
+						</select>
+					</div>
+
+					<div class="inptDiv">
+						<label for="actLevel" class="inpLabel">Exercise Level</label>
+						<select id="actLevel" required>
+            				<option disabled selected value="0">Choose Exercise Level</option>
+							<option value="1.38">moderate exercise and sedentary job</option>
+							<option value="1.6">intense exercise but sedentary job</option>
+							<option value="1.7">moderate exercise and active job</option>
+							<option value="1.9">intense exercise and active job</option>
+						</select>
+					</div>
+
+					<input id="calculate" type="button" value="calculate">
+					<input id="reset" type="reset" value="reset">
+
+				</form>
+				</div>
+			</div>
+
+			</div>
+		</div>
+		<footer id="calcFooter">
+			<p>Joshua Early Projects &trade;</p>
+		</footer>
+
+	<script type="text/javascript" src="Assets/JS/macros.js"></script>
+	</body>
+</html>
